@@ -1,0 +1,15 @@
+.wrapSlider{
+    padding: 20px;
+}
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+.sliderItem {
+    max-width: 400px;
+    height: 225px;
+    margin: 20px -5px;
+    padding: 30px 35px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}

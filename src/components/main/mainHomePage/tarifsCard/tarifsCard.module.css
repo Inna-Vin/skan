@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'inter500';
+    src: url('../../../../../fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'inter400';
+    src: url('../../../../../fonts/Inter-Regular.ttf');
+}
+
+.wrap {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    padding-top: 70px;
+}
+
+.tarifCardWrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    
+}
+
+.tarifCardItem {
+    max-width: 415px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header {
+    padding: 30px;
+    box-sizing: border-box;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.n1 {
+    background-color: #FFB64F;
+}
+
+.n2 {
+    background-color: #7CE3E1;
+}
+
+.n3 {
+    background-color: #000000;
+    color: #fff;
+}
+
+.h2 {
+    margin: 0 0 70px;
+    font-family: 'Ferry';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 54px;
+}
+
+.h3 {
+    margin: 0;
+    font-family: 'Inter500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 0.01em;
+}
+
+.img {
+    position: absolute;
+    top: 15%;
+    right: 10px;
+}
+
+.tarifInfo {
+    padding: 30px 14px 30px 30px;
+    box-sizing: border-box;
+}
+
+.text {
+    font-family: 'Inter400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    }
+
+.price {
+    display: flex;
+}
+
+.h4 {
+    margin: 0 0 0 20px;
+    color: #D2D2D2;
+    text-decoration: line-through;
+    font-family: 'Inter500';
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.listTitle {
+    margin: 60px 0 10px;
+    font-family: 'Inter500';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.listTitleTop {
+    margin-top: 98px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul > li {
+    padding-left: 20px;
+    position: relative;
+    margin: 10px;
+}
+
+ul > li:before {
+    content: '✔';
+    position: absolute; top: 0; left: 0;
+    color: #17D641;
+}
+
+.button {
+    margin-top: 50px;
+    background-color: #5970FF;
+    width: 355px;
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    line-height: 24px;
+    cursor: pointer;
+}
+
+.button:hover{
+    text-decoration: underline;
+}

@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import css from './App.module.css';
+import {BrowserRouter as Router} from 'react-router-dom';
+import Header from './components/header/header';
+import Main from './components/main/main';
+import Footer from './components/footer/footer';
+import { useDispatch } from 'react-redux'
+import { logIn } from './storage/action';
+import { useEffect } from 'react';
 
-function App() {
+
+function App(props) {
+  const {isAuth} = props
+  const dispatch = useDispatch()
+  //const user = localStorage.getItem('user')
+  const token = localStorage.getItem('token')
+  const expire = localStorage.getItem('expire')
+  
+  useEffect(() => {
+    dispatch(logIn(token, expire))
+  })
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={css.wrap}>
+      <Router>
+          <Header isAuth={isAuth}/>
+          <Main isAuth={isAuth}/>
+          <Footer />
+      </Router>
     </div>
   );
 }

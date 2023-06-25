@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'inter500';
+    src: url('../../../../fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'inter400';
+    src: url('../../../../fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Ferry';
+    src: url('../../../../fonts/Ferry/ferry_black.otf');
+}
+
+.mainWrap {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.h1 {
+    margin: 0;
+    font-family: 'Ferry';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.img {
+    margin: 15px 0 0 120px;
+}
+
+.form {
+    width: 429px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 25px 25px 40px 25px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.lockImg {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+}
+
+.formHeader {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.formHeaderButton {
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #C7C7C7;
+    color: #C7C7C7;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-family: 'Inter400';
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.formHeaderButton:hover {
+    border-bottom: 2px solid #029491;
+    color: #029491
+}
+
+.lableInput {
+    color: #949494;
+}
+
+.formInput {
+    width: 379px;
+    height: 43px;
+    border: 1px solid #C7C7C7;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-family: 'Inter400';
+    font-size: 16px;
+    line-height: 19px;
+}
+.output {
+    width: 379px;
+    height: 43px;
+}
+.formButton {
+    width: 379px;
+    margin-top: 30px;
+    padding: 16px;
+    background: #5970FF;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+    font-family: 'Inter500';
+    font-size: 22px;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.formButton:hover {
+    text-decoration: underline;
+}
+
+.formLinkWrap {
+    width: 379px;
+    margin: 15px 0 30px 0;
+    text-align: center;
+}
+
+.restoreLink {
+    color: #5970FF;
+    font-family: 'Inter400';
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.formLogInOtherWrap {
+    display: flex;
+}
+
+.buttonLogo {
+    background: #FFFFFF;
+    padding: 5px;
+    border: 1px solid rgba(89, 112, 255, 0.51);
+    border-radius: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+}

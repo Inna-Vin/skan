@@ -1,0 +1,58 @@
+/* @font-face {
+    font-family: 'Ferry';
+    src: url('../../../../fonts/Ferry/ferry_black.otf');
+} */
+
+main {
+    max-width: 1330px;
+    margin: 0 auto;
+    padding-bottom: 120px;
+}
+
+.sectionRequest {
+    display: flex;
+    justify-content: space-around;
+}
+
+.title {
+    font-family: 'Ferry';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+}
+
+.button {
+    margin-top: 70px;
+    background-color: #5970FF;
+    border-radius: 5px;
+    border: none;
+    padding: 15px 64px;
+    color: white;
+    font-size: 22px;
+    line-height: 27px;
+    cursor: pointer;
+}
+
+.button:hover{
+    text-decoration: underline;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.img {
+    Width: 600px;
+    Height: 560px;
+    margin-top: 55px;
+}
+
+.h2 {
+    margin: 70px 0 20px;
+    font-family: 'Ferry';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 45px;
+    line-height: 54px;
+}
