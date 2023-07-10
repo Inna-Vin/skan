@@ -1,11 +1,17 @@
  import { Link } from 'react-router-dom';
  import css from './headerLogIn.module.css'
+ import MenuMobile from '../menuMobile/menuMobile';
 
-function HeaderLogIn() {
+function HeaderLogIn(props) {
+    const {isAuth} = props
     return (
         <>
-            <p className={css.register}>Зарегистрироваться</p>
-            <Link to={'/log_in'} className={css.button}>Войти</Link>
+            <div className={css.dekstop}>
+                <p className={css.register}>Зарегистрироваться</p>
+                <Link to={'/log_in'} className={css.button}>Войти</Link>
+            </div>
+                
+            <MenuMobile isAuth={isAuth} />
         </>
     )
 }

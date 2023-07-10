@@ -27,3 +27,9 @@
 .navLink:hover {
     text-decoration: underline;
 }
+
+@media (max-width: 730px) {
+    .nav {
+        display: none;
+    }
+}

@@ -14,5 +14,12 @@
     font-weight: 400;
     min-height: 100vh;
     position: relative;
+    padding-bottom: 100px;
+}
 
+@media (max-width: 730px) {
+    .wrap {
+        padding: 14px 14px 100px 14px;
+        box-sizing: border-box;
+    }
 }

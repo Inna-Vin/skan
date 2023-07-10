@@ -4,12 +4,14 @@ import lampa from './lampa.svg';
 import darts from './darts.svg';
 import laptop from './laptop.svg';
 
-function TarifsCard() {
+function TarifsCard(props) {
+    const {isAuth} = props
+
     return (
         <div className={css.wrap}>
         <h2 className={css.h2}>наши тарифы</h2>
         <div className={css.tarifCardWrap}>
-            <div className={css.tarifCardItem}>
+            <div className={clsx(css.tarifCardItem, {[css.currentTariffBorder] : isAuth})}>
                 <div className={clsx(css.header, css.n1)}>
                     <h3 className={css.h3}>Beginner</h3>
                     <p className={css.text}>Для небольшого исследования</p>
@@ -19,6 +21,7 @@ function TarifsCard() {
                     <div className={css.price}>
                         <h3 className={css.h3}>799 ₽</h3>
                         <h4 className={css.h4}>1 200 ₽</h4>
+                        {isAuth && (<p className={css.currentTariff}>Текущий тариф</p>)}
                     </div>
                     <p className={css.text}>или 150 ₽/мес. при рассрочке на 24 мес.</p>
                     <p className={css.listTitle}>В тариф входит:</p>
@@ -27,7 +30,7 @@ function TarifsCard() {
                         <li className={css.listTitleItem}>Безопасная сделка</li>
                         <li className={css.listTitleItem}>Поддержка 24/7</li>
                     </ul>
-                    <button className={css.button}>Подробнее</button>
+                    <button className={clsx(css.button, {[css.currentTariffButton] : isAuth})}>{isAuth ? 'Перейти в личный кабинет' : 'Подробнее'}</button>
                 </div>
             </div>
 

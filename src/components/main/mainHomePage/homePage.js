@@ -4,11 +4,9 @@ import img from './2398 1.svg';
 import bunner from './bunner.svg';
 import SliderImg from './slider/slider';
 import TarifsCard from './tarifsCard/tarifsCard';
-import {useDispatch, useSelector} from "react-redux";
 
 
 function HomePage(props) {
-   // const isAuth = useSelector(state => state.isAuth)
 
    const {isAuth} = props
 
@@ -20,7 +18,7 @@ function HomePage(props) {
                         публикаций<br />
                         о компании<br />
                         по его ИНН</h1>
-                    <p className={css.text}>Комплексный анализ публикаций, получение данных в формате PDF на электронную почту.</p>
+                    <p className={css.text}>Комплексный анализ публикаций, получение данных <br /> в формате PDF на электронную почту.</p>
                     {isAuth && <Link to={'/request'} className={css.button}>Запросить данные</Link>}
                 </div>
                 <div className={css.rigth}>
@@ -30,8 +28,7 @@ function HomePage(props) {
             <h2 className={css.h2}>Почему именно мы</h2>
             <SliderImg />
             <img className={css.bunner} src={bunner} alt='bunner'/>
-            {/* <h2 className={css.h2}>наши тарифы</h2> */}
-            <TarifsCard />          
+            <TarifsCard isAuth={isAuth}/>          
         </main>
     )
 }

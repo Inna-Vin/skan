@@ -19,7 +19,7 @@ function Header(props) {
             <div className={css.logIn}>
                 {isAuth ? ( <HeaderIsAuth isAuth={isAuth}/> ) : ( <HeaderLogIn /> )}
             </div>
-    </header>
+        </header>
     )
 }
 

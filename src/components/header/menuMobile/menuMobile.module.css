@@ -1,0 +1,89 @@
+.burgerMenu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.closeBurgerMenu {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.menuMobile {
+    width: 375px;
+    height: 490px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    background: #029491;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.headerMenuMobile {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.navMenuMobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 26px;
+    font-size: 16px;
+    font-family: 'Inter400';
+    letter-spacing: 0.16px;
+    cursor: pointer;
+}
+
+.navLink:hover {
+    text-decoration: underline;
+}
+
+.register, .userName {
+    text-decoration: none;
+    color: #ffffff65;
+    margin-top: 75px;
+}
+
+.register:hover, .userName:hover {
+    text-decoration: underline;
+}
+
+.buttonLogIn, .buttonLogOut {
+    border-radius: 5px;
+    background: #7CE3E1;
+    border: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Inter500';
+    margin-top: 20px;
+    padding: 15px 115px;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.buttonLogIn:hover, .buttonLogOut:hover {
+    text-decoration: underline;
+}
+
+
+.buttonLogIn:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 730px) {
+    .burgerMenu {
+        display: block;
+    }
+}

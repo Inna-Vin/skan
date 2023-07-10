@@ -23,6 +23,10 @@
     
 }
 
+.currentTariffBorder {
+    border: 3px solid #FFB64F;
+}
+
 .tarifCardItem {
     max-width: 415px;
     border-radius: 10px;
@@ -89,6 +93,7 @@
 
 .price {
     display: flex;
+    position: relative;
 }
 
 .h4 {
@@ -99,6 +104,21 @@
     font-weight: 500;
     font-size: 25px;
     line-height: 30px;
+}
+
+.currentTariff {
+    border-radius: 10px;
+    background: #3BA5E0;
+    color: #fff;
+    padding: 5px 13px;
+    box-sizing: border-box;
+    font-size: 14px;
+    font-family: 'Inter400';
+    letter-spacing: 0.14px;
+    margin: 0;
+    position: absolute;
+    top: -15px;
+    right: 0;
 }
 
 .listTitle {
@@ -147,4 +167,58 @@ ul > li:before {
 
 .button:hover{
     text-decoration: underline;
+}
+
+.currentTariffButton {
+    background: #D2D2D2;
+    color: #000000;
+}
+
+@media (max-width: 1250px) {
+    .tarifCardItem {
+        max-width: 315px;
+    }
+    .button {
+        width: 255px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .wrap {
+        padding-bottom: 0px;
+    }
+    .tarifCardWrap {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarifCardItem {
+        max-width: 415px;
+        margin-bottom: 20px;
+    }
+    .button {
+        width: 355px;
+    }
+}
+
+
+@media (max-width: 850px) {
+    .tarifCardItem {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 730px) {
+    .h2 {
+        font-size: 28px;  
+        line-height: inherit;
+    }
+    .tarifCardItem {
+        width: 335px;
+    }
+    .button {
+        width: 286px;
+    }
 }

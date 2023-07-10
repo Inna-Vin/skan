@@ -1,19 +1,13 @@
 import css from './headerIsAuth.module.css'
 import img from './samsung-memory-hjRC0i0oJxg-unsplash 1.svg'
 import {useDispatch, useSelector} from "react-redux";
-import { logOut, getInfo } from '../../../storage/action';
-import { useEffect } from 'react';
+import { logOut } from '../../../storage/action';
+import MenuMobile from '../menuMobile/menuMobile'
 
 function HeaderIsAuth(props) {
-
     const { isAuth } = props
-    const token = localStorage.getItem('token')
-    const userToken = JSON.parse(token)
-   
     const usedCompanyCount = useSelector(state => state.usedCompanyCount)
     const companyLimit = useSelector(state => state.companyLimit)
-    console.log(usedCompanyCount, companyLimit)
-    
     const dispatch = useDispatch()
 
     const handleClick = (e) => {
@@ -23,34 +17,13 @@ function HeaderIsAuth(props) {
         }
     }
 
-    
-  useEffect (() => { 
-        fetch ('https://gateway.scan-interfax.ru/api/v1/account/info', {
-            method: 'GET',
-            headers: {
-                'Content-type': 'application/json',
-                'Accept': 'application/json',
-                'Authorization': `Bearer ${userToken}`
-            }
-        })
-        .then(response => {
-            return response.json()
-        })
-        .then (data => {
-            //console.log(data)
-            dispatch(getInfo(data.eventFiltersInfo.usedCompanyCount, data.eventFiltersInfo.companyLimit))
-        })
-
-    })
-
-
-
     return (
         <div className={css.headerIsAuth}>
             <div className={css.infoLimit}>
-                <p className={css.text}>Использованно компаний:</p>
-                <p className={css.text}>Лимит по компаниям: </p>
+                <p className={css.text}>Использованно компаний <span className={css.usedCompany}> {usedCompanyCount} </span></p>
+                <p className={css.text}>Лимит по компаниям <span className={css.limits}> {companyLimit} </span></p>
             </div>
+
             <div className={css.userInfo}>
                 <div>
                     <p className={css.name}>Алексей А.</p>
@@ -58,6 +31,8 @@ function HeaderIsAuth(props) {
                 </div>
                 <img className={css.img} src={img} alt='user' />
             </div>
+
+            <MenuMobile isAuth={isAuth} />
         </div>
     )
 }
